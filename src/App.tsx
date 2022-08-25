@@ -1,11 +1,14 @@
-import React from 'react';
+import React from 'react'
+import { Navbar } from './components/Navbar'
+import { Home } from './page/Home'
 
 function App() {
   return (
-    <div>
-      <h1>start</h1>
-    </div>
-  );
+    <>
+      <Navbar />
+      <Home />
+    </>
+  )
 }
 
-export default App;
+export default App
