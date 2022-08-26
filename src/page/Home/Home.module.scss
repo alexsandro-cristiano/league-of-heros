@@ -1,0 +1,23 @@
+@import '../../styles/breakpoints';
+@import '../../styles/functions';
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $xxl) {
+    @include spaceForPadding(200px);
+  }
+  @media (min-width: $xl) and (max-width: $xxl) {
+    @include spaceForPadding(160px);
+  }
+  @media (min-width: $lg) and (max-width: $xl) {
+    @include spaceForPadding(120px);
+  }
+  @media (min-width: $md) and (max-width: $lg) {
+    @include spaceForPadding(40px, 0);
+  }
+  @media (max-width: $sm) {
+    @include spaceForPadding(20px, 0);
+  }
+}
