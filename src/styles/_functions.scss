@@ -1,5 +1,5 @@
 @import './breakpoints';
 
-@mixin spaceForPadding($x, $y: 8px) {
+@mixin setSpaceToPadding($y, $x) {
   padding: $y $x;
 }

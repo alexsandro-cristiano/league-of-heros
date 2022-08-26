@@ -4,21 +4,23 @@
 .main {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 1.5rem;
 
   @media (min-width: $xxl) {
-    @include spaceForPadding(200px);
+    @include setSpaceToPadding(0.8rem, 20rem);
   }
   @media (min-width: $xl) and (max-width: $xxl) {
-    @include spaceForPadding(160px);
+    @include setSpaceToPadding(0.8rem, 16rem);
   }
   @media (min-width: $lg) and (max-width: $xl) {
-    @include spaceForPadding(120px);
+    @include setSpaceToPadding(0.8rem, 12rem);
   }
   @media (min-width: $md) and (max-width: $lg) {
-    @include spaceForPadding(40px, 0);
+    @include setSpaceToPadding(0, 4rem);
   }
   @media (max-width: $sm) {
-    @include spaceForPadding(20px, 0);
+    @include setSpaceToPadding(0, 2rem);
   }
 }
