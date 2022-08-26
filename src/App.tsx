@@ -1,13 +1,9 @@
 import React from 'react'
-import { Navbar } from './components/Navbar'
-import { Home } from './page/Home'
+import { AppRoutes } from 'routes/AppRoutes'
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Home />
-    </>
+    <AppRoutes />
   )
 }
 

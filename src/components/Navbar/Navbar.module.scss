@@ -15,31 +15,36 @@
     align-items: center;
     gap: 2rem;
     li {
-      padding: 1rem;
-      border-radius: 0.8rem;
       a {
+        padding: 1rem;
+        border-radius: 0.8rem;
+        border: 1px solid #656665;
         font-weight: 500;
         font-size: 1.5rem;
-      }
-      &:hover {
-        cursor: pointer;
-        background: #000;
-        color: white;
+        &:hover {
+          background: #000;
+          color: white;
+        }
       }
     }
   }
+
   @media (min-width: $xxl) {
     @include setSpaceToPadding(2rem, 60rem);
   }
+
   @media (min-width: $xl) and (max-width: $xxl) {
     @include setSpaceToPadding(2rem, 22rem);
   }
+
   @media (min-width: $lg) and (max-width: $xl) {
     @include setSpaceToPadding(2rem, 20rem);
   }
+
   @media (min-width: $md) and (max-width: $lg) {
     @include setSpaceToPadding(2rem, 10rem);
   }
+
   @media (max-width: $sm) {
     @include setSpaceToPadding(2rem, 0);
   }
