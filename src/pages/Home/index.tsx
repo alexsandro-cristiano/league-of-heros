@@ -3,10 +3,17 @@ import { Card } from '../../components/Card'
 import styles from './Home.module.scss'
 export function Home() {
   return (
-    <main className={styles.main}>
-      <Card />
-      <Card />
-      <Card />
-    </main>
+    <>
+      <h1>Introdução</h1>
+
+      <h2>Conheça nossos herois</h2>
+      <div className={styles.wrapperCards}>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </div>
+    </>
   )
 }
