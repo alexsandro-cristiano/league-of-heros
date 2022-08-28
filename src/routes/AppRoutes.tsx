@@ -1,22 +1,23 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import { Navbar } from 'components/Navbar'
-import { Pagedefault } from 'pages/Pagedefault'
-import { Home } from 'pages/Home'
-import { Myleague } from 'pages/Myleague'
-import { Aboutus } from 'pages/Aboutus'
 import { Footer } from 'components/Footer'
+import { Navbar } from 'components/Navbar'
+import { Aboutus } from 'pages/Aboutus'
+import { Home } from 'pages/Home'
+import { MyLeague } from 'pages/MyLeague'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 export function AppRoutes() {
   return (
     <Router>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Pagedefault />}>
-          <Route index element={<Home />} />
-          <Route path="myleague" element={<Myleague />} />
-          <Route path="about" element={<Aboutus />} />
-        </Route>
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/">
+            <Route index element={<Home />} />
+            <Route path="myleague" element={<MyLeague />} />
+            <Route path="about" element={<Aboutus />} />
+          </Route>
+        </Routes>
+      </main>
       <Footer />
     </Router>
   )

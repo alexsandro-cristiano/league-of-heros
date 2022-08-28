@@ -1,5 +1,9 @@
-export function Myleague(){
-    return(
-      <h2>Vazio</h2>
-    )
+export function MyLeague() {
+  return (
+    <>
+      <div>
+        <p> para card que terei</p>
+      </div>
+    </>
+  )
 }
