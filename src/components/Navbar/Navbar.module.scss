@@ -2,17 +2,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 2rem;
-
-  margin-bottom: 8rem;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 2rem 20px 50px;
   .logo {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     span {
-      width: 2rem;
-      font-size: 1rem;
-      font-weight: 500;
+      width: 4rem;
+      font-size: 0.8rem;
+      font-weight: 600;
     }
     img {
       display: block;
