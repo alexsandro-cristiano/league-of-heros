@@ -1,21 +1,26 @@
-import { Link } from 'react-router-dom'
+import Logo from 'assets/images/logo.png'
 import styles from './Navbar.module.scss'
 
 export function Navbar() {
   return (
-    <nav className={styles.navbar}>
-      <h3 className={styles.logo}>League of Hero</h3>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/myleague">MyLeague</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-      </ul>
-    </nav>
+    <header className={styles.header}>
+      <div className={styles.logo}>
+        <img src={Logo} alt="Logo" title="Logo" />
+        <span>Liga de Heróis</span>
+      </div>
+      <nav className={styles.navbar}>
+        <ul>
+          <li>
+            <a href="#">Início</a>
+          </li>
+          <li>
+            <a href="#">Minha Liga</a>
+          </li>
+          <li>
+            <a href="#">Sobre</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
   )
 }
