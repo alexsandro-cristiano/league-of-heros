@@ -3,22 +3,22 @@
   justify-content: space-around;
   align-items: flex-end;
   flex-wrap: wrap;
-
-  height: 6rem;
+  padding: 2rem 0;
+  height: 9rem;
   color: #fff;
   background: #000;
   .direitos {
-    font-size: 1rem;
+    font-size: 2.2rem;
   }
   .midiaSocial {
     h3 {
-      font-weight: 500;
-      font-size: 1rem;
+      font-weight: 400;
+      font-size: 1.4rem;
       margin-bottom: 0.8rem;
     }
     ul {
       display: flex;
-      gap: 0.5rem;
+      gap: 1rem;
     }
   }
 }
