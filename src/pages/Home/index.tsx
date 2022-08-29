@@ -4,14 +4,11 @@ import styles from './Home.module.scss'
 
 export function Home() {
   return (
-    <>
+    <main>
       <section className={styles.landing}>
         <div className={styles.title}>
           <span>Encontre o herói para sua liga.</span>
-          <h2>
-            Monte sua liga de herois com os melhores herois de todos os
-            univeros.
-          </h2>
+          <h2>Monte sua liga com os melhores heróis de todos os universos.</h2>
         </div>
         <img src={heroImg} alt="imagem de super herois" />
       </section>
@@ -23,6 +20,6 @@ export function Home() {
           <Card />
         </div>
       </section>
-    </>
+    </main>
   )
 }

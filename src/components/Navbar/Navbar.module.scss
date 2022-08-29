@@ -2,7 +2,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 3rem;
+
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 30px 20px 25px;
+
   .logo {
     display: flex;
     align-items: center;
