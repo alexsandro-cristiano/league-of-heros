@@ -1,0 +1,38 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+
+  .emptyModule {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .text {
+      text-align: center;
+      .title {
+        width: 50rem;
+        font-weight: 500;
+        font-size: 3rem;
+        line-height: 130%;
+      }
+      .subtitleLink,
+      .subtitle {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 130%;
+        margin-top: 1.6rem;
+      }
+      .subtitleLink {
+        font-weight: 500;
+        text-decoration: underline;
+      }
+    }
+    img {
+      border-radius: 1rem;
+      display: block;
+      width: 25rem;
+    }
+  }
+}
