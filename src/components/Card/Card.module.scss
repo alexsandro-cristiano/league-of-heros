@@ -1,6 +1,6 @@
 .card {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
 
   background: #283844;
@@ -8,4 +8,18 @@
   text-align: center;
   width: 18rem;
   height: 24rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+  border: 1px solid black;
+  color: #fff;
+  &:hover {
+    opacity: 1;
+  }
+  div {
+    p {
+      font-size: 2.4rem;
+      font-weight: 800;
+    }
+  }
 }

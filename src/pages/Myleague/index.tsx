@@ -4,19 +4,21 @@ import { Link } from 'react-router-dom'
 import { Card } from 'components/Card'
 import { useState } from 'react'
 
+import emulador from 'data/emulador.json'
 export function MyLeague() {
-  const [myLeague, setMyLeague] = useState([
-    { name: 'teste' },
-    { name: 'teste' }
-  ])
+  const [myLeague, setMyLeague] = useState(emulador)
   return (
     <main>
       <div className={styles.wrapper}>
         {myLeague.length ? (
-          myLeague.map(() => {
+          myLeague.map(item => {
             return (
               <>
-                <Card />
+                <Card
+                  image={item.image.url}
+                  name={item.name}
+                  fullName={item.biography['full-name']}
+                />
               </>
             )
           })

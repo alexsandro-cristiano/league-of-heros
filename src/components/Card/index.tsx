@@ -1,9 +1,17 @@
 import styles from './Card.module.scss'
 
-export function Card() {
+interface IProps {
+  name: string
+  image: string
+  fullName: string
+}
+export function Card({ image, name, fullName }: IProps) {
   return (
-    <div className={styles.card}>
-      <p>informação</p>
+    <div className={styles.card} style={{ backgroundImage: `url(${image})` }}>
+      <div>
+        <p>{fullName}</p>
+        <p>{name}</p>
+      </div>
     </div>
   )
 }

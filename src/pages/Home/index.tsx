@@ -14,11 +14,7 @@ export function Home() {
       </section>
       <section className={styles.cardList}>
         <h3>Nossos Heróis</h3>
-        <div className={styles.wrapper}>
-          <Card />
-          <Card />
-          <Card />
-        </div>
+        <div className={styles.wrapper}></div>
       </section>
     </main>
   )
