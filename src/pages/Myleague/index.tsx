@@ -17,8 +17,6 @@ export function MyLeague() {
               <>
                 {/* <Card
                   image={item.image.url}
-                  name={item.name}
-                  fullName={item.biography['full-name']}
                 /> */}
               </>
             )

@@ -18,9 +18,6 @@ export function Navbar() {
             <li>
               <Link to="myleague">Minha Liga</Link>
             </li>
-            <li>
-              <Link to="about">Sobre</Link>
-            </li>
           </ul>
         </nav>
       </header>

@@ -1,6 +1,6 @@
 import { Footer } from 'components/Footer'
 import { Navbar } from 'components/Navbar'
-import { Aboutus } from 'pages/Aboutus'
+import { Figurinha } from 'pages/Figurinha'
 import { Home } from 'pages/Home'
 import { MyLeague } from 'pages/Myleague'
 import { Notfound } from 'pages/Notfound'
@@ -14,8 +14,8 @@ export function AppRoutes() {
         <Route path="/">
           <Route index element={<Home />} />
           <Route path="myleague" element={<MyLeague />} />
-          <Route path="about" element={<Aboutus />} />
         </Route>
+        <Route path="figurinha/:id" element={<Figurinha />} />
         <Route path="*" element={<Notfound />} />
       </Routes>
       <Footer />

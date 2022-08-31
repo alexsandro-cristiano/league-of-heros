@@ -24,11 +24,7 @@ export function Home() {
         <p className={styles.titleSection}>Heróis Disponíveis</p>
         <div className={styles.boxCards}>
           {lista.map(item => {
-            return (
-              <>
-                <Card image={item.image.url} />
-              </>
-            )
+            return <Card id={Number(item.id)} image={item.image.url} />
           })}
         </div>
       </section>

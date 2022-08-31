@@ -5,4 +5,9 @@
   background-size: cover;
   border-radius: 0.6rem;
   border: 1px solid black;
+  &:hover {
+    cursor: pointer;
+    transform: rotate(8deg);
+    box-shadow: 9px 9px 10px rgba(#000000, 1);
+  }
 }
