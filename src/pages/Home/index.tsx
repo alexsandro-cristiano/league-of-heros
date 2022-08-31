@@ -26,11 +26,7 @@ export function Home() {
           {lista.map(item => {
             return (
               <>
-                <Card
-                  image={item.image.url}
-                  name={item.name}
-                  fullName={item.biography['full-name']}
-                />
+                <Card image={item.image.url} />
               </>
             )
           })}
