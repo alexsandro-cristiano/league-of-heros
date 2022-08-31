@@ -6,25 +6,26 @@ import { useState } from 'react'
 
 import emulador from 'data/emulador.json'
 export function MyLeague() {
-  const [myLeague, setMyLeague] = useState(emulador)
+  const [myLeague, setMyLeague] = useState([])
   return (
     <main>
+      <div>{myLeague.length ? 'Minha Liga' : ''}</div>
       <div className={styles.wrapper}>
         {myLeague.length ? (
           myLeague.map(item => {
             return (
               <>
-                <Card
+                {/* <Card
                   image={item.image.url}
                   name={item.name}
                   fullName={item.biography['full-name']}
-                />
+                /> */}
               </>
             )
           })
         ) : (
           <section className={styles.emptyModule}>
-            <section className={styles.text}>
+            <article className={styles.wrapperText}>
               <p className={styles.title}>
                 Sua liga ainda não tem nenhum membro!
               </p>
@@ -35,7 +36,7 @@ export function MyLeague() {
                 </Link>{' '}
                 para ela.
               </p>
-            </section>
+            </article>
             <img src={coringaImg} alt="imagem do coringa" />
           </section>
         )}

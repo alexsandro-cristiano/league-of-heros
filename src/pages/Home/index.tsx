@@ -12,15 +12,17 @@ export function Home() {
   return (
     <main>
       <section className={styles.landing}>
-        <div className={styles.title}>
-          <span>Encontre o herói para sua liga.</span>
-          <h2>Monte sua liga com os melhores heróis de todos os universos.</h2>
+        <div className={styles.wrapperText}>
+          <p className={styles.title}>Encontre o herói para sua liga.</p>
+          <p className={styles.subtitle}>
+            Monte sua liga com os melhores heróis de todos os universos.
+          </p>
         </div>
         <img src={heroImg} alt="imagem de super herois" />
       </section>
-      <section className={styles.cardList}>
-        <h3>Nossos Heróis</h3>
-        <div className={styles.wrapper}>
+      <section className={styles.wrapperCard}>
+        <p className={styles.titleSection}>Heróis Disponíveis</p>
+        <div className={styles.boxCards}>
           {lista.map(item => {
             return (
               <>

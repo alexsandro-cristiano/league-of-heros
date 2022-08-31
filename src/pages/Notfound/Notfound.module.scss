@@ -1,3 +1,5 @@
+@import '/src/styles/titles';
+
 .information {
   background: #000;
   color: #fff;
@@ -7,20 +9,13 @@
   justify-content: space-around;
   height: 100vh;
 
-  .title {
+  .wrapperText {
     text-align: center;
-    span {
-      display: block;
-      font-weight: 700;
-      font-size: 3rem;
-      line-height: 130%;
+    .title {
+      @include titlePrincipal(3rem);
     }
-    h2 {
-      font-style: normal;
-      font-weight: 400;
-      font-size: 2rem;
-      line-height: 130%;
-      margin-top: 1.6rem;
+    .subtitle {
+      @include subtitle();
     }
     .btn {
       display: inline-block;

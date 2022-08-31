@@ -1,0 +1,22 @@
+@mixin titlePrincipal($valueFont) {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: $valueFont;
+  line-height: 130%;
+}
+
+@mixin titleSection() {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 130%;
+}
+
+@mixin subtitle() {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 130%;
+  margin-top: 1.6rem;
+}

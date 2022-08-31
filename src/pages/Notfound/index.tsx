@@ -6,9 +6,11 @@ export function Notfound() {
   const navigate = useNavigate()
   return (
     <section className={styles.information}>
-      <article className={styles.title}>
-        <span>404 Página não encontrada.</span>
-        <h2>O herói que você procura ainda não nasceu em nenhum universo.</h2>
+      <article className={styles.wrapperText}>
+        <p className={styles.title}>404 Página não encontrada.</p>
+        <p className={styles.subtitle}>
+          O herói que você procura ainda não nasceu em nenhum universo.
+        </p>
         <span className={styles.btn} onClick={() => navigate(-1)}>
           retornar ao seu universo
         </span>
