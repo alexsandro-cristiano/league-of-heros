@@ -2,7 +2,13 @@ import heroImg from 'assets/images/heros.png'
 import { Card } from 'components/Card'
 import styles from './Home.module.scss'
 
+import { useState } from 'react'
+
+import emulador from 'data/emulador.json'
+
 export function Home() {
+  const [lista, setLista] = useState(emulador)
+
   return (
     <main>
       <section className={styles.landing}>
@@ -14,7 +20,19 @@ export function Home() {
       </section>
       <section className={styles.cardList}>
         <h3>Nossos Heróis</h3>
-        <div className={styles.wrapper}></div>
+        <div className={styles.wrapper}>
+          {lista.map(item => {
+            return (
+              <>
+                <Card
+                  image={item.image.url}
+                  name={item.name}
+                  fullName={item.biography['full-name']}
+                />
+              </>
+            )
+          })}
+        </div>
       </section>
     </main>
   )
