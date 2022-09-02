@@ -18,28 +18,58 @@ export function Figurinha() {
           element={
             <main>
               <div className={styles.container}>
-                <img src={figura.image.url} alt={figura.name} />
+                <img
+                  src={figura.image.url}
+                  alt={figura.name}
+                  title={figura.name}
+                />
 
                 <div className={styles.wrapperData}>
-                  <p>{figura.name}</p>
+                  <p className={styles.title}>{figura.name}</p>
 
-                  <section>
+                  <section className={styles.power}>
                     <h2>Powerstats</h2>
-
-                    <div>
-                      <span>bla</span>
-                      <Progressbar done={figura.powerstats.combat} />
-                    </div>
-                    <Progressbar done={figura.powerstats.durability} />
-                    <Progressbar done={figura.powerstats.intelligence} />
-                    <Progressbar done={figura.powerstats.power} />
-                    <Progressbar done={figura.powerstats.speed} />
-                    <Progressbar done={figura.powerstats.strength} />
+                    <Progressbar
+                      done={figura.powerstats.combat}
+                      title={'combat'}
+                    />
+                    <Progressbar
+                      done={figura.powerstats.durability}
+                      title={'durability'}
+                    />
+                    <Progressbar
+                      done={figura.powerstats.intelligence}
+                      title={'intelligence'}
+                    />
+                    <Progressbar
+                      done={figura.powerstats.power}
+                      title={'power'}
+                    />
+                    <Progressbar
+                      done={figura.powerstats.speed}
+                      title={'speed'}
+                    />
+                    <Progressbar
+                      done={figura.powerstats.strength}
+                      title={'strength'}
+                    />
                   </section>
-                  <button type="button" onClick={() => navigate(-1)}>
-                    voltar
-                  </button>
-                  <button> Adicionar a Liga</button>
+                  <div className={styles.wrapperButton}>
+                    <button
+                      className={styles.btn}
+                      type="button"
+                      onClick={() => navigate(-1)}
+                    >
+                      voltar
+                    </button>
+                    <button
+                      className={styles.btn}
+                      type="button"
+                      onClick={() => navigate(-1)}
+                    >
+                      Adicionar a Liga
+                    </button>
+                  </div>
                 </div>
               </div>
             </main>
