@@ -1,14 +1,14 @@
-import { Route, Routes, useNavigate, useParams } from 'react-router-dom'
-import emulador from 'data/emulador.json'
-import { Notfound } from 'pages/Notfound'
-import styles from './Figurinha.module.scss'
-import { Progressbar } from 'pages/Figurinha/Progressbar'
+import { Route, Routes, useNavigate, useParams } from 'react-router-dom';
+import emulador from 'data/emulador.json';
+import { Notfound } from 'pages/Notfound';
+import styles from './Figurinha.module.scss';
+import { Progressbar } from 'pages/Figurinha/Progressbar';
 export function Figurinha() {
-  const { id } = useParams()
-  const navigate = useNavigate()
-  const figura = emulador.find(item => item.id === id)
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const figura = emulador.find(item => item.id === Number(id));
   if (!figura) {
-    return <Notfound />
+    return <Notfound />;
   }
   return (
     <Routes>
@@ -77,5 +77,5 @@ export function Figurinha() {
         />
       </Route>
     </Routes>
-  )
+  );
 }

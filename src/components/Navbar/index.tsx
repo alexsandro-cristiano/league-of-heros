@@ -1,6 +1,6 @@
-import Logo from 'assets/images/logo.png'
-import { Link } from 'react-router-dom'
-import styles from './Navbar.module.scss'
+import Logo from 'assets/images/logo.png';
+import { NavLink } from 'react-router-dom';
+import styles from './Navbar.module.scss';
 
 export function Navbar() {
   return (
@@ -13,14 +13,14 @@ export function Navbar() {
         <nav className={styles.navbar}>
           <ul>
             <li>
-              <Link to="/">Início</Link>
+              <NavLink to="/">Início</NavLink>
             </li>
             <li>
-              <Link to="myleague">Minha Liga</Link>
+              <NavLink to="myleague">Minha Liga</NavLink>
             </li>
           </ul>
         </nav>
       </header>
     </>
-  )
+  );
 }
