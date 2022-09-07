@@ -1,15 +1,25 @@
+import { useContext } from 'react';
 import { Route, Routes, useNavigate, useParams } from 'react-router-dom';
-import emulador from 'data/emulador.json';
-import { Notfound } from 'pages/Notfound';
-import styles from './Figurinha.module.scss';
+
 import { Progressbar } from 'pages/Figurinha/Progressbar';
+import { Notfound } from 'pages/Notfound';
+import { FigureContext } from 'context/FigureContext';
+
+import emulador from 'data/emulador.json';
+
+import styles from './Figurinha.module.scss';
+
 export function Figurinha() {
+  const { addHero } = useContext(FigureContext);
   const { id } = useParams();
   const navigate = useNavigate();
+
   const figura = emulador.find(item => item.id === Number(id));
+
   if (!figura) {
     return <Notfound />;
   }
+
   return (
     <Routes>
       <Route path="*">
@@ -62,10 +72,11 @@ export function Figurinha() {
                     >
                       voltar
                     </button>
+
                     <button
                       className={styles.btn}
                       type="button"
-                      onClick={() => navigate(-1)}
+                      onClick={() => addHero(figura.id)}
                     >
                       Adicionar a Liga
                     </button>

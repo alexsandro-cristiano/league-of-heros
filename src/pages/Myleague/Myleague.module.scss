@@ -1,5 +1,10 @@
 @import '/src/styles/titles';
 
+.title {
+  @include titlePrincipal(2rem);
+  margin-bottom: 3rem;
+  text-align: center;
+}
 .wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -10,21 +15,6 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-
-    .wrapperText {
-      text-align: center;
-      .title {
-        @include titlePrincipal(3rem);
-      }
-      .subtitleLink,
-      .subtitle {
-        @include subtitle();
-      }
-      .subtitleLink {
-        text-decoration: underline;
-        font-weight: 600;
-      }
-    }
     img {
       border-radius: 1rem;
       display: block;

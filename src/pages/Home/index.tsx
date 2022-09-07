@@ -1,13 +1,11 @@
-import heroImg from 'assets/images/heros.png'
-import { Card } from 'components/Card'
-import styles from './Home.module.scss'
+import heroImg from 'assets/images/heros.png';
+import { Card } from 'components/Card';
+import styles from './Home.module.scss';
 
-import { useState } from 'react'
-
-import emulador from 'data/emulador.json'
+import emulador from 'data/emulador.json';
 
 export function Home() {
-  const [lista, setLista] = useState(emulador)
+  const heros = [...emulador];
 
   return (
     <main>
@@ -23,11 +21,13 @@ export function Home() {
       <section className={styles.wrapperCard}>
         <p className={styles.titleSection}>Heróis Disponíveis</p>
         <div className={styles.boxCards}>
-          {lista.map(item => {
-            return <Card id={Number(item.id)} image={item.image.url} />
+          {heros.map(hero => {
+            return (
+              <Card key={hero.id} id={Number(hero.id)} image={hero.image.url} />
+            );
           })}
         </div>
       </section>
     </main>
-  )
+  );
 }

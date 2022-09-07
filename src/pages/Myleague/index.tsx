@@ -1,25 +1,25 @@
-import coringaImg from 'assets/images/coringa.png'
-import styles from './Myleague.module.scss'
-import { Link } from 'react-router-dom'
-import { Card } from 'components/Card'
-import { useState } from 'react'
+import coringaImg from 'assets/images/coringa.png';
+import { Card } from 'components/Card';
+import { FigureContext } from 'context/FigureContext';
+import { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import styles from './Myleague.module.scss';
 
-import emulador from 'data/emulador.json'
 export function MyLeague() {
-  const [myLeague, setMyLeague] = useState([])
+  const { league } = useContext(FigureContext);
   return (
     <main>
-      <div>{myLeague.length ? 'Minha Liga' : ''}</div>
+      <div className={styles.wrapperText}>
+        {league.length ? <p className={styles.title}>Minha Liga</p> : ''}
+      </div>
       <div className={styles.wrapper}>
-        {myLeague.length ? (
-          myLeague.map(item => {
+        {league.length ? (
+          league.map(item => {
             return (
               <>
-                {/* <Card
-                  image={item.image.url}
-                /> */}
+                <Card key={item.id} id={item.id} image={item.image.url} />
               </>
-            )
+            );
           })
         ) : (
           <section className={styles.emptyModule}>
@@ -40,5 +40,5 @@ export function MyLeague() {
         )}
       </div>
     </main>
-  )
+  );
 }
