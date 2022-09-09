@@ -1,3 +1,5 @@
+![Capa do Projeto]('./public/capa.jpeg')
+
 # League of Heros
 
 ## Objetivo
@@ -12,8 +14,8 @@ Construir uma aplicação que possa adicionar Heros na melhor liga de todas, a s
   - react icon
 - Typescript
 - Html
-- CSS | Modules
-- Sass
+- CSS/Sass com Modules
+- Json-Serve
 
 ## Licença
 
