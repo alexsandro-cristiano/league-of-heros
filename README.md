@@ -10,7 +10,6 @@
 ### Tópicos
 
 - [Descrição do projeto](#descrição-do-projeto)
-- [Status do Projeto](#status-do-Projeto)
 - [Funcionalidades](#funcionalidades)
 - [Acesso ao Projeto](#acesso-ao-projeto)
 - [Tecnologias utilizadas](#tecnologias-utilizadas)
@@ -26,32 +25,30 @@
  A league of hero (LoH) é uma aplicação SPA, singe page aplication, para montar sua liga personalizada com heróis de dos os uiversos.
 </p>
 
-## Status do Projeto
-
-<h4 align="center"> 
-    :construction:  Projeto em construção  :construction:
-</h4>
-
 ## Funcionalidades
+
+![version](https://img.shields.io/badge/version-1.1.1-green.svg)
 
 :heavy_check_mark: `Funcionalidade 1:` Adicionar heróis na liga.
 
 ![Miniatura da Home](https://user-images.githubusercontent.com/75186371/189478483-a4b83c5e-001d-4dbd-8d75-01a8edd5f5e2.jpeg)
 
-## Ferramentas utilizadas
+
+## Acesso ao projeto
+
+Você pode acessar [o código fonte ](https://github.com/alexsandro-cristiano/league-of-heros) ou [navegar no site](https://leagueofheros.vercel.app/).
+
+## Tecnologias Utilizadas
 
 - React
   - react router dom
   - context API
   - react icon
+- LocalStorage
 - Typescript
-- Html
 - CSS Module com Sass
 - Json-Server
-
-## Acesso ao projeto
-
-Você pode acessar [o código fonte ](https://github.com/alexsandro-cristiano/league-of-heros) ou [navegar no site](https://leagueofheros.vercel.app/).
+- Html
 
 ## Licença
 
