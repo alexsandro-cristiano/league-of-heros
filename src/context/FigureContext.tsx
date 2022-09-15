@@ -1,26 +1,9 @@
 import { createContext, ReactNode, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import emulador from 'data/emulador.json';
+import { Figure } from 'types/IFigure';
 
-interface Powerstats {
-  intelligence: string;
-  strength: string;
-  speed: string;
-  durability: string;
-  power: string;
-  combat: string;
-}
-
-interface Image {
-  url: string;
-}
-
-interface Figure {
-  id: number;
-  name: string;
-  powerstats: Powerstats;
-  image: Image;
-}
+const LOCAL_STORAGE_KEY = 'heros';
 
 interface FigureContextType {
   league: Figure[];
@@ -30,8 +13,6 @@ interface FigureContextType {
 interface IFigureContextProviderProps {
   children: ReactNode;
 }
-
-const LOCAL_STORAGE_KEY = 'heros';
 
 export const FigureContext = createContext({} as FigureContextType);
 
@@ -59,10 +40,13 @@ export function FigureContextProvider({
 
   function addHero(id: number) {
     const newHero = emulador.find(item => item.id === id);
+    const isRegistered = !Boolean(league.find(item => item.id === id));
 
-    if (newHero) {
+    if (newHero && isRegistered) {
       setLeagueAndSave([...league, newHero]);
       navigate(`/myleague`);
+    } else {
+      console.log('lançar erro');
     }
   }
 
